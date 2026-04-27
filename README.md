@@ -23,4 +23,5 @@ INFO: if no arugments are passed the system will execute the comparison test
 All the function are documented and most of them are documented following the Doxygen documentation.
 
 ## Notes
-I used Clion for develop the project as IDE
+I used Clion for develop the project as IDE.
+Ignore the the makefile.

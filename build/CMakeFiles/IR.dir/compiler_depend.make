@@ -60,6 +60,68 @@ CMakeFiles/IR.dir/src/IO/bin_reader.c.o: /home/juan/UNI/IR/src/IO/bin_reader.c \
   /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h
 
+CMakeFiles/IR.dir/src/IO/doc_retriever.c.o: /home/juan/UNI/IR/src/IO/doc_retriever.c \
+  /home/juan/UNI/IR/include/IO/doc_retriever.h \
+  /usr/include/alloca.h \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h
+
 CMakeFiles/IR.dir/src/IO/one_timer_IO.c.o: /home/juan/UNI/IR/src/IO/one_timer_IO.c \
   /home/juan/UNI/IR/include/utils/reverse_word.h \
   /home/juan/UNI/IR/include/IO/one_timer_IO.h \
@@ -270,6 +332,7 @@ CMakeFiles/IR.dir/src/console.c.o: /home/juan/UNI/IR/src/console.c \
 
 CMakeFiles/IR.dir/src/gui.c.o: /home/juan/UNI/IR/src/gui.c \
   /home/juan/UNI/IR/include/IO/bin_reader.h \
+  /home/juan/UNI/IR/include/IO/doc_retriever.h \
   /home/juan/UNI/IR/include/gui.h \
   /home/juan/UNI/IR/include/queryparser.h \
   /usr/include/alloca.h \
@@ -1855,6 +1918,7 @@ IR: /lib/i386-linux-gnu/libLerc.so.4 \
   /usr/lib/i386-linux-gnu/libzstd.so.1 \
   /usr/lib/x86_64-linux-gnu/libc_nonshared.a \
   CMakeFiles/IR.dir/src/IO/bin_reader.c.o \
+  CMakeFiles/IR.dir/src/IO/doc_retriever.c.o \
   CMakeFiles/IR.dir/src/IO/one_timer_IO.c.o \
   CMakeFiles/IR.dir/src/IO/reduced_one_timer_IO.c.o \
   CMakeFiles/IR.dir/src/console.c.o \
@@ -2463,10 +2527,6 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/glib-2.0/glib/glib-autocleanups.h:
 
-/usr/include/gtk-4.0/gtk/deprecated/gtkvolumebutton.h:
-
-/usr/include/libadwaita-1/adw-application.h:
-
 /usr/include/glib-2.0/glib/giochannel.h:
 
 /usr/include/glib-2.0/glib/ghostutils.h:
@@ -2549,9 +2609,9 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/gtk-4.0/gtk/gtkpadcontroller.h:
 
-/usr/include/glib-2.0/gio/gnativesocketaddress.h:
+/usr/include/glib-2.0/glib.h:
 
-/usr/include/gtk-4.0/gtk/gtknativedialog.h:
+/usr/include/gtk-4.0/gtk/gtkbookmarklist.h:
 
 /usr/lib/i386-linux-gnu/libpangoft2-1.0.so.0:
 
@@ -2560,8 +2620,6 @@ CMakeFiles/IR.dir/src/test.c.o:
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/harfbuzz/hb-style.h:
-
-/usr/include/glib-2.0/glib.h:
 
 /usr/include/glib-2.0/gio/gdbusaddress.h:
 
@@ -2623,6 +2681,8 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h:
 
+/home/juan/UNI/IR/include/IO/doc_retriever.h:
+
 /usr/include/glib-2.0/gio/gio-autocleanups.h:
 
 /lib/x86_64-linux-gnu/libcom_err.so.2:
@@ -2679,22 +2739,6 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/libadwaita-1/adw-spinner.h:
 
-/usr/include/glib-2.0/gio/gsocketaddress.h:
-
-/home/juan/UNI/IR/include/IO/bin_reader.h:
-
-/usr/include/gtk-4.0/gtk/gtkbuilder.h:
-
-/usr/include/libadwaita-1/adw-split-button.h:
-
-/usr/include/gtk-4.0/gtk/gtkactionbar.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/features-time64.h:
-
-/usr/include/glib-2.0/gio/gaction.h:
-
 /usr/include/gtk-4.0/gdk/gdkcicpparams.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
@@ -2704,6 +2748,8 @@ CMakeFiles/IR.dir/src/test.c.o:
 /lib/x86_64-linux-gnu/libbz2.so.1.0:
 
 /usr/include/libadwaita-1/adw-enum-list-model.h:
+
+/usr/include/glib-2.0/gio/gaction.h:
 
 /usr/include/glib-2.0/glib/gerror.h:
 
@@ -2725,21 +2771,21 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/pango-1.0/pango/pango-types.h:
 
-/usr/include/glib-2.0/gio/gnetworkservice.h:
-
 /home/juan/UNI/IR/src/utils/reverse_word.c:
 
-/usr/include/glib-2.0/gio/gsimpleiostream.h:
+/home/juan/UNI/IR/include/IO/bin_reader.h:
 
-/usr/include/strings.h:
+/usr/include/glib-2.0/gio/gsocketaddress.h:
 
-/usr/include/gtk-4.0/gtk/deprecated/gtkcellrendererprogress.h:
+/usr/include/gtk-4.0/gtk/gtkbuilder.h:
 
-/usr/include/graphene-1.0/graphene-plane.h:
+/usr/include/libadwaita-1/adw-split-button.h:
 
-/usr/include/gtk-4.0/gdk/gdkcontentproviderimpl.h:
+/usr/include/features-time64.h:
 
-/usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h:
+/usr/include/gtk-4.0/gtk/gtkactionbar.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /home/juan/UNI/IR/include/IO/one_timer_IO.h:
 
@@ -2758,6 +2804,28 @@ CMakeFiles/IR.dir/src/test.c.o:
 /usr/include/graphene-1.0/graphene-box.h:
 
 /usr/include/gtk-4.0/gtk/gtkroot.h:
+
+/usr/include/glib-2.0/gio/gsocket.h:
+
+/usr/include/gtk-4.0/gtk/gtkfixedlayout.h:
+
+/usr/include/glib-2.0/gio/gtlsclientconnection.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/glib-2.0/gio/gnetworkservice.h:
+
+/usr/include/glib-2.0/gio/gsimpleiostream.h:
+
+/usr/include/strings.h:
+
+/usr/include/gtk-4.0/gtk/deprecated/gtkcellrendererprogress.h:
+
+/usr/include/graphene-1.0/graphene-plane.h:
+
+/usr/include/gtk-4.0/gdk/gdkcontentproviderimpl.h:
+
+/usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h:
 
 /usr/include/gtk-4.0/gdk/gdkdrawcontext.h:
 
@@ -2782,6 +2850,8 @@ CMakeFiles/IR.dir/src/test.c.o:
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /lib/i386-linux-gnu/libgmp.so.10:
+
+/home/juan/UNI/IR/src/IO/doc_retriever.c:
 
 /usr/include/glib-2.0/glib/gmem.h:
 
@@ -2853,6 +2923,20 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:
 
+/usr/include/gtk-4.0/gtk/deprecated/gtkfilechooserdialog.h:
+
+/usr/include/gtk-4.0/gdk/gdkseat.h:
+
+/usr/include/gtk-4.0/gtk/gtkgesturedrag.h:
+
+/usr/include/glib-2.0/gmodule/gmodule-visibility.h:
+
+/usr/include/endian.h:
+
+/usr/include/glib-2.0/gio/gcharsetconverter.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/14/include/stdbool.h:
+
 /usr/include/string.h:
 
 /usr/include/gtk-4.0/gdk/gdkcontentformats.h:
@@ -2860,8 +2944,6 @@ CMakeFiles/IR.dir/src/test.c.o:
 /usr/include/libadwaita-1/adw-navigation-direction.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
-
-/usr/include/endian.h:
 
 /usr/include/glib-2.0/gio/gfileicon.h:
 
@@ -2873,6 +2955,10 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/glib-2.0/gio/gsocketaddressenumerator.h:
 
+/lib/x86_64-linux-gnu/libtiff.so.6:
+
+/usr/include/gtk-4.0/gdk/gdkdrop.h:
+
 /usr/include/glib-2.0/gio/gfilterinputstream.h:
 
 /usr/lib/i386-linux-gnu/libgssapi_krb5.so.2:
@@ -2880,14 +2966,6 @@ CMakeFiles/IR.dir/src/test.c.o:
 /usr/include/graphene-1.0/graphene-vec4.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/gtk-4.0/gdk/gdkpopup.h:
-
-/usr/include/glib-2.0/gio/gfileenumerator.h:
-
-/lib/x86_64-linux-gnu/libgnutls.so.30:
-
-/usr/include/graphene-1.0/graphene-macros.h:
 
 /usr/include/stdc-predef.h:
 
@@ -2912,20 +2990,6 @@ CMakeFiles/IR.dir/src/test.c.o:
 /usr/include/gtk-4.0/gtk/deprecated/gtkmessagedialog.h:
 
 /home/juan/UNI/IR/include/queryparser.h:
-
-/usr/include/glib-2.0/gio/gdtlsconnection.h:
-
-/usr/include/libadwaita-1/adw-spring-animation.h:
-
-/usr/include/glib-2.0/gio/gliststore.h:
-
-/usr/include/glib-2.0/gio/gnotification.h:
-
-/usr/include/glib-2.0/gio/gpollableoutputstream.h:
-
-/usr/include/glib-2.0/gio/gmemoryinputstream.h:
-
-/usr/include/glib-2.0/gio/gpropertyaction.h:
 
 /usr/include/gtk-4.0/gtk/gtkcheckbutton.h:
 
@@ -2973,10 +3037,6 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/gtk-4.0/gtk/gtkgesturezoom.h:
 
-/lib/x86_64-linux-gnu/libunistring.so.5:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
 /usr/include/glib-2.0/gio/gbytesicon.h:
 
 /lib/i386-linux-gnu/libsharpyuv.so.0:
@@ -2999,6 +3059,10 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/libadwaita-1/adw-carousel.h:
 
+/usr/include/glib-2.0/glib-object.h:
+
+/usr/include/glib-2.0/gio/gtcpwrapperconnection.h:
+
 /usr/include/x86_64-linux-gnu/bits/sigaction.h:
 
 /usr/include/glib-2.0/gio/gunixfdlist.h:
@@ -3019,13 +3083,13 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/glib-2.0/gio/gmenuexporter.h:
 
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/usr/include/glib-2.0/gio/gtlsclientconnection.h:
-
 /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-io.h:
 
 /usr/include/dirent.h:
+
+/usr/include/gtk-4.0/gtk/gtksingleselection.h:
+
+/usr/include/gtk-4.0/gtk/deprecated/gtkstylecontext.h:
 
 /usr/include/glib-2.0/glib/gconvert.h:
 
@@ -3059,10 +3123,6 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/14/include/stdbool.h:
-
-/usr/include/glib-2.0/gio/gcharsetconverter.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /lib/i386-linux-gnu/libXcursor.so.1:
@@ -3093,6 +3153,8 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /lib/i386-linux-gnu/libxcb.so.1:
 
+CMakeFiles/IR.dir/src/IO/doc_retriever.c.o:
+
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/gtk-4.0/gtk/deprecated/gtklockbutton.h:
@@ -3102,12 +3164,6 @@ CMakeFiles/IR.dir/src/test.c.o:
 /usr/include/glib-2.0/gio/gactiongroupexporter.h:
 
 /usr/include/x86_64-linux-gnu/bits/signum-arch.h:
-
-/usr/include/glib-2.0/gio/gtcpwrapperconnection.h:
-
-/usr/include/glib-2.0/glib-object.h:
-
-/usr/include/gtk-4.0/gtk/gtkbookmarklist.h:
 
 /usr/include/libadwaita-1/adw-application-window.h:
 
@@ -3133,25 +3189,39 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/glib-2.0/gio/gthreadedsocketservice.h:
 
-/usr/include/gtk-4.0/gtk/deprecated/gtkfilechooserdialog.h:
-
-/usr/include/gtk-4.0/gdk/gdkseat.h:
-
-/usr/include/gtk-4.0/gtk/gtkgesturedrag.h:
-
-/usr/include/glib-2.0/gmodule/gmodule-visibility.h:
-
-/usr/include/glib-2.0/gio/gsocket.h:
+/usr/include/graphene-1.0/graphene-point3d.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/usr/include/graphene-1.0/graphene-point3d.h:
+/usr/include/glib-2.0/gio/gdtlsconnection.h:
 
-/usr/include/gtk-4.0/gtk/gtkfixedlayout.h:
+/usr/include/libadwaita-1/adw-spring-animation.h:
 
-/usr/include/gtk-4.0/gtk/deprecated/gtkstylecontext.h:
+/usr/include/glib-2.0/gio/gliststore.h:
 
-/usr/include/gtk-4.0/gtk/gtksingleselection.h:
+/usr/include/glib-2.0/gio/gnotification.h:
+
+/usr/include/glib-2.0/gio/gpollableoutputstream.h:
+
+/usr/include/glib-2.0/gio/gmemoryinputstream.h:
+
+/usr/include/glib-2.0/gio/gpropertyaction.h:
+
+/lib/x86_64-linux-gnu/libunistring.so.5:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/glib-2.0/gio/gnativesocketaddress.h:
+
+/usr/include/gtk-4.0/gtk/gtknativedialog.h:
+
+/usr/include/gtk-4.0/gdk/gdkpopup.h:
+
+/usr/include/glib-2.0/gio/gfileenumerator.h:
+
+/lib/x86_64-linux-gnu/libgnutls.so.30:
+
+/usr/include/graphene-1.0/graphene-macros.h:
 
 /usr/include/glib-2.0/gio/gfileiostream.h:
 
@@ -3383,6 +3453,10 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/gtk-4.0/gtk/gtkaccessiblerange.h:
 
+/usr/include/gtk-4.0/gtk/deprecated/gtkvolumebutton.h:
+
+/usr/include/libadwaita-1/adw-application.h:
+
 /usr/include/gtk-4.0/gtk/gtkaspectframe.h:
 
 /usr/include/gtk-4.0/gtk/gtkatcontext.h:
@@ -3443,9 +3517,9 @@ CMakeFiles/IR.dir/src/test.c.o:
 
 /usr/include/gtk-4.0/gtk/gtkconstraintguide.h:
 
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
 /usr/include/glib-2.0/glib/grand.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /lib/i386-linux-gnu/libunistring.so.5:
 
@@ -3950,10 +4024,6 @@ CMakeFiles/IR.dir/src/test.c.o:
 /usr/include/glib-2.0/glib/gmain.h:
 
 /usr/include/sched.h:
-
-/usr/include/gtk-4.0/gdk/gdkdrop.h:
-
-/lib/x86_64-linux-gnu/libtiff.so.6:
 
 /usr/include/libadwaita-1/adw-tab-overview.h:
 

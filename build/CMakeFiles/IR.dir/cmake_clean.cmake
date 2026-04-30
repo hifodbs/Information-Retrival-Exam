@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/IR.dir/link.d"
   "CMakeFiles/IR.dir/src/IO/bin_reader.c.o"
   "CMakeFiles/IR.dir/src/IO/bin_reader.c.o.d"
+  "CMakeFiles/IR.dir/src/IO/doc_retriever.c.o"
+  "CMakeFiles/IR.dir/src/IO/doc_retriever.c.o.d"
   "CMakeFiles/IR.dir/src/IO/one_timer_IO.c.o"
   "CMakeFiles/IR.dir/src/IO/one_timer_IO.c.o.d"
   "CMakeFiles/IR.dir/src/IO/reduced_one_timer_IO.c.o"

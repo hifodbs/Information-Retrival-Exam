@@ -153,6 +153,30 @@ src/IO/bin_reader.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IR.dir/build.make CMakeFiles/IR.dir/src/IO/bin_reader.c.s
 .PHONY : src/IO/bin_reader.c.s
 
+src/IO/doc_retriever.o: src/IO/doc_retriever.c.o
+.PHONY : src/IO/doc_retriever.o
+
+# target to build an object file
+src/IO/doc_retriever.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IR.dir/build.make CMakeFiles/IR.dir/src/IO/doc_retriever.c.o
+.PHONY : src/IO/doc_retriever.c.o
+
+src/IO/doc_retriever.i: src/IO/doc_retriever.c.i
+.PHONY : src/IO/doc_retriever.i
+
+# target to preprocess a source file
+src/IO/doc_retriever.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IR.dir/build.make CMakeFiles/IR.dir/src/IO/doc_retriever.c.i
+.PHONY : src/IO/doc_retriever.c.i
+
+src/IO/doc_retriever.s: src/IO/doc_retriever.c.s
+.PHONY : src/IO/doc_retriever.s
+
+# target to generate assembly for a file
+src/IO/doc_retriever.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IR.dir/build.make CMakeFiles/IR.dir/src/IO/doc_retriever.c.s
+.PHONY : src/IO/doc_retriever.c.s
+
 src/IO/one_timer_IO.o: src/IO/one_timer_IO.c.o
 .PHONY : src/IO/one_timer_IO.o
 
@@ -405,6 +429,9 @@ help:
 	@echo "... src/IO/bin_reader.o"
 	@echo "... src/IO/bin_reader.i"
 	@echo "... src/IO/bin_reader.s"
+	@echo "... src/IO/doc_retriever.o"
+	@echo "... src/IO/doc_retriever.i"
+	@echo "... src/IO/doc_retriever.s"
 	@echo "... src/IO/one_timer_IO.o"
 	@echo "... src/IO/one_timer_IO.i"
 	@echo "... src/IO/one_timer_IO.s"

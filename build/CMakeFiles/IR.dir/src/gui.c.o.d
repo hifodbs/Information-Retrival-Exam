@@ -878,4 +878,5 @@ CMakeFiles/IR.dir/src/gui.c.o: /home/juan/UNI/IR/src/gui.c \
  /usr/include/libadwaita-1/adw-wrap-box.h \
  /usr/include/libadwaita-1/adw-wrap-layout.h /usr/include/ctype.h \
  /home/juan/UNI/IR/include/gui.h /home/juan/UNI/IR/include/queryparser.h \
- /home/juan/UNI/IR/include/IO/bin_reader.h
+ /home/juan/UNI/IR/include/IO/bin_reader.h \
+ /home/juan/UNI/IR/include/IO/doc_retriever.h

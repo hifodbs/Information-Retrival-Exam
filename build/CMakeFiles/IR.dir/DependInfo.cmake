@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/juan/UNI/IR/src/IO/bin_reader.c" "CMakeFiles/IR.dir/src/IO/bin_reader.c.o" "gcc" "CMakeFiles/IR.dir/src/IO/bin_reader.c.o.d"
+  "/home/juan/UNI/IR/src/IO/doc_retriever.c" "CMakeFiles/IR.dir/src/IO/doc_retriever.c.o" "gcc" "CMakeFiles/IR.dir/src/IO/doc_retriever.c.o.d"
   "/home/juan/UNI/IR/src/IO/one_timer_IO.c" "CMakeFiles/IR.dir/src/IO/one_timer_IO.c.o" "gcc" "CMakeFiles/IR.dir/src/IO/one_timer_IO.c.o.d"
   "/home/juan/UNI/IR/src/IO/reduced_one_timer_IO.c" "CMakeFiles/IR.dir/src/IO/reduced_one_timer_IO.c.o" "gcc" "CMakeFiles/IR.dir/src/IO/reduced_one_timer_IO.c.o.d"
   "/home/juan/UNI/IR/src/console.c" "CMakeFiles/IR.dir/src/console.c.o" "gcc" "CMakeFiles/IR.dir/src/console.c.o.d"

@@ -13,6 +13,7 @@ IR: \
   CMakeFiles/IR.dir/src/utils/encoder_decoder.c.o \
   CMakeFiles/IR.dir/src/test.c.o \
   CMakeFiles/IR.dir/src/gui.c.o \
+  CMakeFiles/IR.dir/src/IO/doc_retriever.c.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libm.so \
@@ -349,6 +350,8 @@ CMakeFiles/IR.dir/src/utils/encoder_decoder.c.o:
 CMakeFiles/IR.dir/src/test.c.o:
 
 CMakeFiles/IR.dir/src/gui.c.o:
+
+CMakeFiles/IR.dir/src/IO/doc_retriever.c.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libm.so:
 

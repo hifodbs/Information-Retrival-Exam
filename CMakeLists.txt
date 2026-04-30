@@ -32,6 +32,8 @@ add_executable(IR
         include/test.h
         src/gui.c
         include/gui.h
+        src/IO/doc_retriever.c
+        include/IO/doc_retriever.h
 )
 
 target_link_libraries(IR m ${GTK4_LIBRARIES} ${ADWAITA_LIBRARIES})

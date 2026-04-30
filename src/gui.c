@@ -6,10 +6,12 @@
 #include "gui.h"
 #include "queryparser.h"
 #include "IO/bin_reader.h"
+#include "IO/doc_retriever.h"
 
 // External references to files defined in main.c or elsewhere
 extern char *BIN_FILE;
 extern char *BIN_REDUCED_FILE;
+extern char *SOURCE_FILE;
 
 typedef struct {
     AdwApplicationWindow *window;
@@ -19,6 +21,33 @@ typedef struct {
     int current_mode; // 0 for standard, 1 for reduced
 } GuiContext;
 
+static void on_row_activated(GtkListBox *listbox, GtkListBoxRow *row, gpointer user_data) {
+    Document *doc = g_object_get_data(G_OBJECT(row), "document");
+    if (doc) {
+        GtkWidget *parent = GTK_WIDGET(gtk_widget_get_root(GTK_WIDGET(listbox)));
+
+        // Use a heading for the title and an extra child for the abstract to ensure left alignment
+        AdwDialog *dialog = adw_alert_dialog_new(doc->title, NULL);
+
+        GtkWidget *abstract_label = gtk_label_new(doc->abstract ? doc->abstract : "No abstract available.");
+        gtk_label_set_wrap(GTK_LABEL(abstract_label), TRUE);
+        gtk_label_set_xalign(GTK_LABEL(abstract_label), 0.0); // Left align
+        gtk_label_set_selectable(GTK_LABEL(abstract_label), TRUE);
+
+        // Add some padding to the abstract
+        gtk_widget_set_margin_start(abstract_label, 12);
+        gtk_widget_set_margin_end(abstract_label, 12);
+        gtk_widget_set_margin_top(abstract_label, 6);
+        gtk_widget_set_margin_bottom(abstract_label, 12);
+
+        adw_alert_dialog_set_extra_child(ADW_ALERT_DIALOG(dialog), abstract_label);
+
+        adw_alert_dialog_add_response(ADW_ALERT_DIALOG(dialog), "close", "Close");
+        adw_alert_dialog_choose(ADW_ALERT_DIALOG(dialog), parent, NULL, NULL, NULL);
+    }
+}
+
+
 static void on_search_changed(GtkSearchEntry *entry, gpointer user_data) {
     GuiContext *ctx = (GuiContext *)user_data;
     const char *query_text = gtk_editable_get_text(GTK_EDITABLE(entry));
@@ -27,12 +56,15 @@ static void on_search_changed(GtkSearchEntry *entry, gpointer user_data) {
         return;
     }
 
+    // Clear previous results
+    GtkListBoxRow *row;
+    while ((row = gtk_list_box_get_row_at_index(ctx->results_list, 0)) != NULL) {
+        Document *doc = g_object_get_data(G_OBJECT(row), "document");
+        if (doc) free_document(doc);
+        gtk_list_box_remove(ctx->results_list, GTK_WIDGET(row));
+    }
+
     if (strlen(query_text) == 0) {
-        // Clear results
-        GtkListBoxRow *row;
-        while ((row = gtk_list_box_get_row_at_index(ctx->results_list, 0)) != NULL) {
-            gtk_list_box_remove(ctx->results_list, GTK_WIDGET(row));
-        }
         return;
     }
 
@@ -45,26 +77,38 @@ static void on_search_changed(GtkSearchEntry *entry, gpointer user_data) {
 
     query_parser(&result, &len, query);
 
-    // Clear previous results
-    GtkListBoxRow *row;
-    while ((row = gtk_list_box_get_row_at_index(ctx->results_list, 0)) != NULL) {
-        gtk_list_box_remove(ctx->results_list, GTK_WIDGET(row));
-    }
-
     if (len == 0) {
         GtkWidget *label = gtk_label_new("No results found");
         gtk_list_box_append(ctx->results_list, label);
     } else {
         for (int i = 0; i < len; i++) {
-            char buffer[32];
-            snprintf(buffer, sizeof(buffer), "Document ID: %d", result[i]);
-            GtkWidget *label = gtk_label_new(buffer);
-            gtk_widget_set_halign(label, GTK_ALIGN_START);
-            gtk_widget_set_margin_start(label, 12);
-            gtk_widget_set_margin_end(label, 12);
-            gtk_widget_set_margin_top(label, 6);
-            gtk_widget_set_margin_bottom(label, 6);
-            gtk_list_box_append(ctx->results_list, label);
+            Document *doc = get_document_by_id(SOURCE_FILE, result[i]);
+            if (doc) {
+                GtkWidget *row_box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 2);
+                gtk_widget_set_margin_start(row_box, 8);
+                gtk_widget_set_margin_end(row_box, 8);
+                gtk_widget_set_margin_top(row_box, 8);
+                gtk_widget_set_margin_bottom(row_box, 8);
+                
+                GtkWidget *title_label = gtk_label_new(doc->title);
+                gtk_label_set_wrap(GTK_LABEL(title_label), TRUE);
+                gtk_label_set_xalign(GTK_LABEL(title_label), 0.0);
+                gtk_widget_add_css_class(title_label, "title-4");
+                gtk_box_append(GTK_BOX(row_box), title_label);
+
+                char id_buf[32];
+                snprintf(id_buf, sizeof(id_buf), "Document ID: %d", doc->id);
+                GtkWidget *id_label = gtk_label_new(id_buf);
+                gtk_label_set_xalign(GTK_LABEL(id_label), 0.0);
+                gtk_widget_add_css_class(id_label, "caption");
+                gtk_box_append(GTK_BOX(row_box), id_label);
+
+                gtk_list_box_append(ctx->results_list, row_box);
+                
+                // Get the row we just added to attach the document data
+                GtkListBoxRow *row_widget = gtk_list_box_get_row_at_index(ctx->results_list, i);
+                g_object_set_data(G_OBJECT(row_widget), "document", doc);
+            }
         }
     }
 
@@ -137,7 +181,8 @@ static void activate(GtkApplication *app, gpointer user_data) {
     gtk_box_append(GTK_BOX(main_box), scrolled_window);
 
     ctx->results_list = GTK_LIST_BOX(gtk_list_box_new());
-    gtk_list_box_set_selection_mode(ctx->results_list, GTK_SELECTION_NONE);
+    gtk_list_box_set_selection_mode(ctx->results_list, GTK_SELECTION_SINGLE);
+    g_signal_connect(ctx->results_list, "row-activated", G_CALLBACK(on_row_activated), ctx);
     adw_preferences_group_add(ADW_PREFERENCES_GROUP(preferences_group), gtk_label_new("Results")); // Just a separator-like label
     
     GtkWidget *results_group = adw_preferences_group_new();

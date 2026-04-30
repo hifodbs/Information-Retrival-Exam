@@ -31,6 +31,11 @@ const char *Token_names[] = {
  * @param ids Outer parameter: All the ids found
  */
 void reduced_get_ids_from_word(char *word, int *len, int **ids) {
+    if (dict == NULL) {
+        *len = 0;
+        *ids = NULL;
+        return;
+    }
     char **words = NULL;
     int n_words = 0;
     for (int i = 0; i < dict->size; i++) {
@@ -63,6 +68,11 @@ void reduced_get_ids_from_word(char *word, int *len, int **ids) {
  * @param ids Outer parameter: All the ids found
  */
 void get_ids_from_word(char *word, int *len, int **ids) {
+    if (dict == NULL) {
+        *len = 0;
+        *ids = NULL;
+        return;
+    }
     for (int i = 0; i < dict->size; i++) {
         if (strcmp(dict->word[i], word) == 0) {
             int *new_ids;
@@ -381,6 +391,11 @@ int *evaluate(int *len, Stack *rpn_stack) {
  * 3. evaluate it
  */
 void query_parser(int **indexes, int *len, char *q) {
+    if (dict == NULL) {
+        *len = 0;
+        *indexes = NULL;
+        return;
+    }
     int size = get_number_of_words(q);
     token *token_list = malloc(sizeof(struct _token) * size);
     if (token_list == NULL)

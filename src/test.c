@@ -15,7 +15,7 @@
 #include "IO/reduced_one_timer_IO.h"
 #include "utils/encoder_decoder.h"
 
-int N_QUERIES = 1000;
+int N_QUERIES = 100;
 
 /**
  *

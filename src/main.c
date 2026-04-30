@@ -7,8 +7,9 @@
 #include "console.h"
 #include "test.h"
 #include "IO/reduced_one_timer_IO.h"
+#include "gui.h"
 
-char *SOURCE_FILE = "cran/cran.all.1400";
+char *SOURCE_FILE = "cran/cran.all copy.1400";
 char *BIN_FILE = "bin/reverse_index.bin";
 char *BIN_REDUCED_FILE = "bin/r_reverse_index.bin";
 
@@ -24,6 +25,10 @@ int main(int argc, char *argv[]) {
 
         srand(time(NULL));
         test_compare(SOURCE_FILE, BIN_FILE, BIN_REDUCED_FILE);
+
+    } else if (strcmp(argv[1], "--gui") == 0) {
+
+        return gui_run(argc, argv);
 
     } else if (strcmp(argv[1], "std") == 0) {
 

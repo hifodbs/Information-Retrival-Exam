@@ -16,6 +16,9 @@ void init_bin_reader(char *filename) {
     if (rptr != NULL)
         return;
     rptr = fopen(filename, "rb");
+    if (rptr == NULL) {
+        perror("Error opening binary file");
+    }
 }
 
 /**
@@ -34,6 +37,7 @@ void close_bin_reader() {
  * @return Array of ids red
  */
 int *get_idxs_from_bin(long pos, int *len) {
+    if (rptr == NULL) return NULL;
     int lentgh = 0;
     int *ids;
     fseek(rptr, pos, SEEK_SET);
@@ -75,7 +79,8 @@ void add_id(int id, int *isd, int *id_len) {
  * @param len outer parameter: return the number of all Ids
  */
 void get_dict_and_ids(dictionary *d, int **is, int *len) {
-     dictionary dict = malloc(sizeof(struct _dictionary));
+    if (rptr == NULL) return;
+    dictionary dict = malloc(sizeof(struct _dictionary));
     if (dict == NULL)
         return;
 
@@ -124,6 +129,7 @@ void get_dict_and_ids(dictionary *d, int **is, int *len) {
  * @details made it for the reduced algorithm
  */
 void reduced_get_dict_and_ids(dictionary *d, int **is, int *len) {
+    if (rptr == NULL) return;
     dictionary dict = malloc(sizeof(struct _dictionary));
     if (dict == NULL)
         return;
@@ -194,6 +200,7 @@ void reduced_get_dict_and_ids(dictionary *d, int **is, int *len) {
  * @details it have to decode the information in the bin file
  */
 int *reduced_get_idxs_from_bin(long pos, int *len) {
+    if (rptr == NULL) return NULL;
     int char_length = 0;
     fseek(rptr, pos, SEEK_SET);
     fread(&char_length, sizeof(int), 1, rptr);

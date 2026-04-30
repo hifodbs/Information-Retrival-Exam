@@ -1,0 +1,3 @@
+/home/juan/UNI/IR/build/CMakeFiles/IR.dir
+/home/juan/UNI/IR/build/CMakeFiles/edit_cache.dir
+/home/juan/UNI/IR/build/CMakeFiles/rebuild_cache.dir
